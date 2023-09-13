@@ -1,0 +1,41 @@
+.pokemon_container * {
+  text-align: center;
+  padding: 0.5rem;
+}
+.pokemon_container {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'image image'
+    'number number'
+    'height weight';
+  gap: 1rem;
+}
+
+.pokemon_container h1 {
+  grid-area: header;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  border-bottom: 1rem solid #e33d33;
+  padding-bottom: .5rem;
+  border-radius: 15px;
+}
+
+.pokemon_container .image_container {
+  grid-area: image;
+}
+
+.pokemon_container .number_container {
+  grid-area: number;
+}
+
+.pokemon_container .height_container {
+  grid-area: height;
+  border-right: 1px solid #e33d33;
+  padding-right: 2rem;
+}
+
+.pokemon_container .weight_container {
+  grid-area: weight;
+}

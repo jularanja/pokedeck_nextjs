@@ -1,0 +1,142 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid transparent;
+  transition: 200ms, border 200ms;
+  list-style: none;
+  gap: 1rem;
+  flex: 1;
+  min-width: 200px;
+  min-height: 300px;
+  perspective: 1000px !important;
+}
+
+.card_title {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 1rem;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+/*Card flipper effect*/
+
+.card_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: grid;
+  gap: 10rem;
+}
+
+.card:hover .card_inner {
+  transform: rotateY(180deg);
+}
+
+
+.card_front,
+.card_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 3px solid #e33d33;
+  
+}
+
+.card_front {
+  background-color: #ece0e0;
+  color: black;
+  display: flex;
+}
+
+.card_back {
+  background-color: #fefefe;
+  color: #333;
+  transform: rotateY(180deg);
+}
+
+.card_back img {
+  position: relative;
+  top: -10px;
+  opacity: .95;
+
+ 
+}
+.card_back .image_container{
+  min-height: 180px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.8rem;
+    transition: 100ms, border 200ms;
+}
+
+.card_inner img{
+  transition: 200ms, border 200ms;
+}
+.card_inner .card_front img{
+  transition: .1s;
+}
+.card:hover .card_inner .card_back  img{
+  transform: scale(1.7);
+  opacity: 1;
+}
+
+
+
+
+.card_back p {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  background-color: #e33d33;
+  border-radius: 3px;
+  color: #fff;
+  padding: 0.3rem;
+  max-width: 45px;
+  margin: 0.3rem auto;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.card .link_details {
+  color: #333;
+  border: 1px solid #e33d33 ;
+  padding: 0.4rem;
+  border-radius: 50px;
+  opacity: 0.9;
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: 13px;
+  display: grid;
+  margin-top: -5px;
+  letter-spacing: px;
+  
+  
+
+}
+
+.link_details:hover {
+  opacity: 1;
+  background-color: #e33d33;
+  border: 1px solid #e33d33 ;
+  color: #fff;
+}
